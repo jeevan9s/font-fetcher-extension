@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "color": "^4.2.3",
+    "colorjs.io": "^0.5.2"
+  }
+}

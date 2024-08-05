@@ -1,0 +1,218 @@
+body {
+    background-color: rgb(245, 247, 241);
+}
+
+
+#title {
+    font-family: 'Kanit';
+    font-size: 55px;
+    color: rgb(39, 38, 38); 
+}
+
+#title_container {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers items within the container */
+    justify-content: center; /* Horizontally centers items within the container */
+    gap: 4vh; /* Space between elements */
+    text-align: center; /* Centers text inside the container */
+    background-color:#cf7f0799;
+}
+
+
+#img_container {
+    display: flex; 
+    align-items: center; /* Centers the icon vertically within its container */
+
+}
+
+#text_container {
+    margin-top: 6vh;
+    text-align: center;
+}
+
+#text2_container {
+    text-align: center;
+    
+}
+
+#text3_container {
+    text-align: center;
+    
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#text1, #text2, #text3 {
+    font-family: 'Rubik';
+    font-size: 20px;
+    opacity: 0;
+} 
+
+#text1 {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+#text2 {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+#text3 {
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: .75s;
+}
+
+#footer {
+    text-align: center;
+    background-color: rgba(10, 10, 10, 0.875);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   
+}
+
+footer {
+    font-size: 28px;
+    font-family: 'Oxygen';
+    color: rgb(238, 237, 236);
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
+
+}
+
+
+#contact_form {
+    width: 85%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    margin-top: 4vh;
+    padding: 20px;
+    background-color: rgb(231, 233, 228);
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+    size: 400px 400px;
+}
+
+
+#contact_tite {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact_tite h2 {
+    font-size: 36px;
+    font-family: 'Kanit';
+    font-weight: 800;
+    color: #2c2c2c; 
+}
+
+#contact_tite hr {
+    border: 0;
+    height: 2.4px;
+    background: rgba(44, 44, 44, 0.5); 
+    margin: 10px auto; 
+}
+
+/* Form inputs */
+#contact input[type="text"],
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0; 
+    border: 1.25px solid #4e4d4d; 
+    border-radius: 15px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+}
+
+#contact input::placeholder {
+    font-family: 'Oxygen';
+}
+#contact textarea {
+    height: 150px; 
+    resize: vertical; 
+}
+
+#contact textarea::placeholder {
+    font-family: 'Oxygen';
+}
+
+#contact button {
+    background-color: #165c19; 
+    border: none;
+    color: white; 
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: 'Oxygen';
+    transition: background-color 0.3s; 
+}
+
+
+
+#contact button:hover {
+    background-color: #0da314; 
+}
+
+#contact_form {
+    display: none
+}
+
+#showform {
+    opacity: 0;
+    background-color: rgb(196, 130, 7); 
+    border: 1px solid rgb(66, 66, 66);
+    box-shadow: 0 6px rgba(114, 75, 1);
+    color: white; 
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 6px; 
+    cursor: pointer;
+    font-family: 'Oxygen';
+    transition: background-color 0.3s; 
+    animation: fadeIn 2s ease-in forwards, pulse 1.5s ease-in-out 2s 2;
+
+}
+
+#showform:hover {
+    background-color: #faae21; 
+    box-shadow: 0 6px rgb(155, 101, 1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: rgb(196, 130, 7);
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #faae21;
+    }
+    100% {
+        transform: scale(1);
+        background-color: rgb(196, 130, 7);
+    }
+
+    
+}
+#btn_container {
+    margin-top: 2vh;
+    text-align: center;
+}

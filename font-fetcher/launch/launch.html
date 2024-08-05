@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="../images/icon_light.png">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="launch.css">
+    <title>Font Fetcher</title>
+    <style>
+        /* Add some basic CSS for layout and visibility */
+        #contact_form {
+            display: none;
+            /* Hidden by default */
+            margin-top: 20px;
+        }
+
+        #contact_tite {
+            margin-bottom: 10px;
+        }
+
+        #footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title_container">
+        <strong id="title">Font-Fetcher</strong>
+        <div id="img_container">
+            <img id="icon" src="../images/icon2.png" alt="Font Fetcher Icon" style="width: 72px; height: 72px;">
+        </div>
+    </div>
+
+    <div id="text_container">
+        <p id="text1">To get started, highlight any text, right-click it, and select</p>
+    </div>
+
+    <div id="text2_container">
+        <p id="text2"><b>Get Font Properties</b></p>
+    </div>
+
+    <div id="text3_container">
+        <p id="text3">Click the copy buttons to save font properties to your clipboard</p>
+    </div>
+
+    <div id="btn_container">
+        <button id="showform">Contact</button>
+    </div>
+
+    <div id="contact_form">
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact">
+            <div id="contact_tite">
+                <h2 id="tite">Contact</h2>
+                <hr>
+            </div>
+            <div id="form">
+                <input type="hidden" name="access_key" value="8d785854-18c8-4ec8-a7e9-6d6fe4a28a82">
+                <input type="text" name="names" placeholder="Enter Name: " id="name" required>
+                <input type="text" name="emails" placeholder="Enter Email: " id="email" required>
+                <textarea name="messages" placeholder="Enter Message: " id="message"></textarea>
+                <button type="submit">Submit &rarr;</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="footer">
+        <footer>
+            2024 Font Fetcher &trade;
+        </footer>
+    </div>
+    <script src="launch.js"></script>
+</body>
+
+</html>

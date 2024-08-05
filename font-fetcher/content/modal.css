@@ -1,0 +1,145 @@
+#font_modal {
+    display: none;
+    position: absolute;
+    width: 500px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+}
+
+#font_modal .modal-header {
+    margin-top: -.7vh;
+    text-align: center;
+}
+
+#font_modal #font1,
+#font_modal #finder {
+    font-family: 'Roboto Mono';
+    font-size: 4vh;
+    font-weight: 800;
+}
+
+#font_modal #finder {
+    font-style: italic;
+    color: rgb(182, 105, 3);
+}
+
+#font_modal #font1 {
+    color: rgb(233, 229, 229);
+}
+
+/* Close button styles */
+#font_modal #close_modal {
+    text-align: center;
+    position: absolute;
+    top: 2px;
+    right: 3.5px;
+    background: none;
+    font-size:  2.5em;
+    color: rgb(129, 28, 28);
+    cursor: pointer;
+    border-radius: 6.5px;
+    height: 1em;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+#font_modal #close_modal:hover {
+    font-size: 2.6em;
+    background: rgba(107, 4, 4, 0.12); /* Grey background with low transparency */
+
+}
+
+/* Font info styles */
+#font_modal #font_info {
+    color: rgb(202, 196, 196);
+}
+
+#font_modal #header, 
+#font_modal #p1, 
+#font_modal #p2, 
+#font_modal #p3, 
+#font_modal #p4 {
+    display: flex;
+    text-align: right;
+}
+
+#font_modal #font_fam,
+#font_modal #size_fam,
+#font_modal #style_fam,
+#font_modal #colour_fam {
+    display: flex;
+    justify-content: space-between;
+}
+
+#font_modal #font,
+#font_modal #size,
+#font_modal #style,
+#font_modal #colour {
+    color: rgb(202, 196, 196);
+    font-size: 1.35vh;
+    margin: 0;
+}
+
+/* Button styles */
+#font_modal button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(19, 19, 19);
+    padding: 6px 11px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    outline: none; /* Remove focus outline */
+}
+
+#font_modal button:hover {
+    color: rgb(182, 105, 3);
+    font-size: 17px;
+}
+
+/* Horizontal rule styles */
+#font_modal hr {
+    margin: 10px 0;
+}
+
+.modal-container {
+    background: rgba(7, 7, 7, 0.6); /* Grey background with low transparency */
+    backdrop-filter: blur(10px); /* Blurs the content behind the modal */
+    -webkit-backdrop-filter: blur(10px); /* For WebKit browsers */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Slightly visible border */
+    box-shadow: 0 8px 32px 0 rgba(3, 3, 3, 0.7); /* Shadow effect */
+    padding: 15px; /* Ensure padding is visible */
+    overflow: auto; /* Allows scrolling if the content overflows */
+    resize: vertical; /* Allows both horizontal and vertical resizing */
+    min-height: 75px; /* Minimum height of the modal */
+}
+
+
+#font_modal #copyall,
+#font_modal #copyfont,
+#font_modal #copysize,
+#font_modal #copystyle,
+#font_modal #copycolour {
+    margin-left: 3vh; outline: none; background: none; border: none; color: rgb(224, 219, 219); padding: 6px 11px; text-decoration: none; display: inline-block; font-size: 15px; cursor: pointer; border-radius: 8px; transition: background-color 0.3s;
+}
+
+#font_modal #copyall:hover,
+#font_modal #copyfont:hover,
+#font_modal #copysize:hover,
+#font_modal #copystyle:hover,
+#font_modal #copycolour:hover {
+    color: #d86213;
+    font-size: 17px;
+}
+
+
+
+
+
