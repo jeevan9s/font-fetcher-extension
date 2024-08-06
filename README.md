@@ -70,3 +70,4 @@ function findClosestColor(rgbColor) {
 Furthermore, I included a launch page which uses an email API to handle incoming client emails. 
 
 ### Video Demonstration
+https://youtu.be/MXVYI6_wm88?si=i66EWkZt4MWNIyJo
