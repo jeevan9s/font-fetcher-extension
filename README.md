@@ -18,10 +18,10 @@
 <table width="100%" cellspacing="0" cellpadding="0">
   <tr>
     <td width="50%">
-      <img src="./media/fontfetcher-ui.png" style="width:100%; height:auto;">
+      <img src="./media/font-fetcher-1.png" style="width:100%; height:auto;">
     </td>
     <td width="50%">
-      <img src="./media/fontfetcher-highlight.png" style="width:100%; height:auto;">
+      <img src="./media/font-fetcher-2.png" style="width:100%; height:auto;">
     </td>
   </tr>
 </table>
@@ -105,6 +105,5 @@ function findClosestColor(rgbColor) {
 # Video Demonstration
 https://youtu.be/MXVYI6_wm88?si=i66EWkZt4MWNIyJo
 
-# Contact
-email: jeevansanchez42@gmail.com
-LinkedIn: https://linkedin.com/in/jeevansanchez
+## Contact 
+[`email`](mailto:jeevansanchez42@gmail.com)&nbsp;&nbsp;&nbsp; [``LinkedIn``](https://linkedin.com/in/jeevansanchez)
