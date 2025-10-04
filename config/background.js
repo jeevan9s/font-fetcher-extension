@@ -1,6 +1,5 @@
-// background.js
 chrome.runtime.onInstalled.addListener(() => {
-    console.log("Extension installed");  // Check if this is logged
+    console.log("Extension installed");  // check for log
     chrome.contextMenus.create({
         id: "getFontProperties",
         title: "Get Font Properties",
