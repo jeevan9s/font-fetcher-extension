@@ -1,36 +1,69 @@
 # Font Fetcher
+> Google Chrome Extension to easily retreive and copy font properties of selected text.
 
-## CS50x Final Project
->This is my capstone project for the CS50x Introduction to Computer Science Course
+<details>
+<summary>Contents</summary>
 
->JavaScript, HTML CSS, Google Chrome Extension
+- [Overview](#overview)
+- [Architecture](#architecture)
+  - [Font Extraction](#font-extraction)
+  - [Copy to Clipboard](#copy-to-clipboard)
+  - [Colour Mapping](#colour-mapping)
+- [Video Demonstration](#video-demonstration)
+- [Contact](#contact)
 
-### Features:
-I used JavaScript for the core functions used by the extension, and HTML & CSS for the framework, and design of the project.
+</details>
 
-### Technical Description:
-The core algorithm of the project uses the getComputedStyle() method on a temprorary span containing the users highlighted text, which is accessed by the getSelection method, as well as the range(), and surroundContents() methods.
-```javascript
+# Overview
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%">
+      <img src="./media/fontfetcher-ui.png" style="width:100%; height:auto;">
+    </td>
+    <td width="50%">
+      <img src="./media/fontfetcher-highlight.png" style="width:100%; height:auto;">
+    </td>
+  </tr>
+</table>
+
+I built Font Fetcher as a capstone project for <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50X</a> 2024 (Harvard's CS50 Introduction to Computer Science)
+- Font Fetcher is a Chrome extension that allows users to highlight text on a webpage and retrieve its font properties, including family, size, weight, and color.  
+
+## Built With
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) Extension APIs
+
+# Architecture
+## Font Extraction
+The core algorithm uses getComputedStyle() on a temporary <span> containing the user's highlighted text. Highlighted text is accessed with getSelection(), and range() / surroundContents() methods.
+
+```js
 const selection = window.getSelection();
-    if (selection.rangeCount > 0) {
-        const range = selection.getRangeAt(0);
-        const span = document.createElement("span");
-        range.surroundContents(span);
+if (selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+    const span = document.createElement("span");
+    range.surroundContents(span);
 
-        // retrieve properties on the span container (highlighted text)
-        const textCS = window.getComputedStyle(span);
+    // retrieve properties on the span container (highlighted text)
+    const textCS = window.getComputedStyle(span);
+}
 ```
 
+## Copy to Clipboard
+The copyTextToClipboard() function uses the navigator API to copy font property data from the span elements to the user's clipboard.
 
-
-Another function I implemented, _copyTextToClipboard()_ uses the navigator property to insert the contents of the span elements containing the font properties into the user's clipboard.
-```javascript
+```js
 function copyTextToClipboard(text, property) {
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text);
+}
 ```
 
-The final core function I implemented uses Euclidean distance calculations for RGB values, for finding the correct "colour name" for a RGB value. This function uses mathematical JS methods like sqrt.
-```javascript
+## Colour Mapping
+RGB values are converted to the closest color name using Euclidean distance calculations.  
+
+```js
 function colorDistance(color1, color2) {
     const [r1, g1, b1, a1] = color1;
     const [r2, g2, b2, a2] = color2;
@@ -38,12 +71,14 @@ function colorDistance(color1, color2) {
 }
 ```
 
-Using an AI-generate RGB map, I iteratively extracted the correct colour name for the respective RGB value.
-```javascript
+<details>
+<summary>findClosestColor()</summary>
+
+
+```js
 function findClosestColor(rgbColor) {
     const colorNamesRGBA = {};
     for (const [name, rgb] of Object.entries(colorNames)) {
-        // Convert rgb to rgba format with alpha = 1
         const [r, g, b] = rgb.match(/\d+/g).map(Number);
         colorNamesRGBA[name] = [r, g, b, 1];
     }
@@ -65,9 +100,11 @@ function findClosestColor(rgbColor) {
     return closestColor;
 }
 ```
+</details>
 
-
-Furthermore, I included a launch page which uses an email API to handle incoming client emails. 
-
-### Video Demonstration
+# Video Demonstration
 https://youtu.be/MXVYI6_wm88?si=i66EWkZt4MWNIyJo
+
+# Contact
+email: jeevansanchez42@gmail.com
+LinkedIn: https://linkedin.com/in/jeevansanchez
